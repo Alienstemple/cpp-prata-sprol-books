@@ -1,0 +1,9 @@
+4
+Vasya
+400
+Petya
+70000
+Vova
+4
+Misha
+10000
