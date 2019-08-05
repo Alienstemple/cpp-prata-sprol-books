@@ -29,7 +29,7 @@ int main()
         show_array(properties, size);
     }
     cout << "Done.\n";
-    // cin.get();
+    cin.get();
     // cin.get();
     return 0;
 }
@@ -77,6 +77,6 @@ void show_array(const double * ar_start, const double * ar_end)
 void revalue(double r, double * ar_start, double * ar_end)
 {
     double* ptr = ar_start;
-    for (ptr; ptr < ar_end; ptr++)
-        *(ptr) *= r;
+    for (ptr; ptr != ar_end; ptr++)
+        *ptr *= r;
 }
