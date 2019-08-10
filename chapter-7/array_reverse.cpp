@@ -21,7 +21,7 @@ int main()
 }
 int Fill_array(double * arr, int size)
 {
-    cout << endl << "Enter array: ";
+    cout << endl << "Enter array (letter to stop): ";
     int i = 0;
     while ((cin >> arr[i]) && (i++ < size));
     return i;

@@ -41,7 +41,7 @@ double * fill_array(double ar[], int limit)
     int i;
     for (i = 0; i < limit; i++)
     {
-        cout << "Enter value #" << (i + 1) << ": ";
+        cout << "Enter value #" << (i + 1) << " (-1 to stop): ";
         cin >> temp;
         if (!cin)    // bad input
         {
