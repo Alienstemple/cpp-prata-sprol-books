@@ -3,31 +3,29 @@
 using std::cout;
 using std::endl;
 
-int & show (const char * str, int * num = 0);
+void show (const char * str, int num = 0);
 int main()
 {
     char string[10];
     for (int i = 0; i < 10; i++)
         string[i] = 'r';
     string[10] = '\0';
-    int times = 0;
-    show(string, &times);
     show(string);
     show(string);
-    int final;
-    final = show(string);
-    int * ptr = &final;
-    show(string, ptr);
+    show(string);
+    show(string);
+    show(string, 1);
     return 0;
 }
-int & show (const char * str, int * num)
+void show (const char * str, int num)
 {
+    static int calls = 0;              // static внутреннее связыв - сохран знач от вызова к вызову
     cout << endl;
     int iter;
-    if (*num != 0)
-        iter = *num;
+    if (!num)            // num = 0
+        iter = num;
     else 
-        iter = 0;
+        iter = calls;
     while (iter -- >= 0)
     {
         int i(0);
@@ -38,7 +36,6 @@ int & show (const char * str, int * num)
         }
         cout << " ";
     }
-    *num++;
-    cout << endl << *num;
-    return *num;
+    calls++;
+    cout << endl << calls;
 }

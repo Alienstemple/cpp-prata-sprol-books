@@ -45,7 +45,7 @@ void max_med(int (*mas)[NUM_MONTHS], int size)
     int max_agent(0);
     for (int i = 0; i < NUM_AGENTS; i++)
     {
-        int med = (mas[i][(NUM_MONTHS - 2) / 2] + mas[i][NUM_MONTHS / 2]) / 2;
+        int med = (mas[i][(NUM_MONTHS - 2) / 2] + mas[i][NUM_MONTHS / 2]) / 2; // среднее 5 и 6 месяца
         if (med > max_med)
         {
             max_med = med;
